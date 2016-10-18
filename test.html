@@ -1,0 +1,47 @@
+<table cellpadding="4" cellspacing="4" border="1" id="orderedProductsTbl">
+<!--
+                <thead>
+                    <tr>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            Description
+                        </td>
+                        <td>
+                            ID
+                        </td>
+                    </tr>
+                </thead>
+-->
+                <tbody id="orderedProductsTblBody">
+
+                <tr><td>Mara</td><td>Wild Photography</td><td align="right">50</td></tr><tr><td>indian</td><td>Indian Ocean</td><td align="right">50</td></tr></tbody>
+
+            </table>
+<script>
+    //gets table
+    var oTable = document.getElementById('orderedProductsTbl');
+
+    //gets rows of table
+    var rowLength = oTable.rows.length;
+
+    //loops through rows
+    for (i = 0; i < rowLength; i++){
+
+      //gets cells of current row
+       var oCells = oTable.rows.item(i).cells;
+
+       //gets amount of cells of current row
+       var cellLength = oCells.length;
+
+       //loops through each cell in current row
+       for(var j = 0; j < cellLength; j++){
+
+              // get your cell info here
+
+              var cellVal = oCells.item(j).innerHTML;
+              alert(cellVal);
+           }
+    }
+</script>
